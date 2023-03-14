@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+nav{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(236, 213, 11);
+    color: #fff;
+    transition: 0.5s ease;
+}
+ 
+nav header h3{
+    font-size: 2rem;
+    margin: 10px;
+    padding: 1rem;
+}
+
+nav header h3 a{
+    text-decoration: none;
+    color: #fff;
+}
+
+nav .nav-list ul{
+    display: flex;
+}
+
+nav .nav-list li{
+    list-style: none;
+}
+
+nav .nav-list li a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    font-size: 20px;
+    display: block;
+}
+
+nav .nav-list li:hover{
+    background-color: rgba(176, 170, 11, 0.846);
+}
+
+nav a.toggle{
+    position: absolute;
+    top: 35px;
+    right: 1rem;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    transition: 5s ease;
+}
+
+nav .toggle .bar{
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px){
+    nav a.toggle{
+        transition: 0.5s ease-in-out;
+        display: flex;
+
+    }
+
+    nav .nav-list{
+        display: none;
+        width: 100%;
+        transition: .5s ease;
+    }
+
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .nav-list ul{
+        width: 100%;
+        flex-direction: column;
+        transition: 0.5s ease;
+    }
+
+    nav .nav-list li a{
+        padding: 1rem;
+    }
+
+    nav .nav-list.active{
+        display: flex;
+    }
+    .container .content{
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.cake{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('images/cupcakes\ \(4\).jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cake p{
+    font-family: 'Poopins', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.image{
+    width: 350px;
+    height: 300px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #060c21;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container .content{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    grid-gap: 10px 20px;
+    grid-row: auto;
+}
+
+.container .content .panel{
+    padding: 15px;
+    color: aqua;
+    flex-direction: column;
+}
+
+.container .content .panel p{
+    font-size: 1.5rem;
+}
+
+.container .content .panel span{
+    font-size: 34px;
+}
+
+.container .content .panel button{
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    background: #111;
+    color: aqua;
+    cursor: pointer;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+
+.container .content .panel button:hover{
+    background: #fff;
+    opacity: 1;
+    color: #000;
+}
+
+
+footer{
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #111;
+	width: 100vw;
+	height: auto;
+	padding-top: 40px;
+	color: #fff;
+}
+.footer-content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+footer-content h3{
+	font-size: 1.5rem;
+	font-weight: 500;
+	text-transform: capitalize;
+}
+
+.footer-content p{
+	max-width: 500px;
+	margin: 10px auto;
+	line-height: 20px;
+	font-size: 14px;
+}
+
+.socials{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+	margin: 0 10px;
+}
+.socials a{
+	text-decoration: none;
+	color: #fff;
+	transition: color .4s ease;
+}
+.socials a i{
+	font-size: 1.1rem;
+}
+.socials a:hover i{
+	color: aqua;
+}
+
+.footer-bottom{
+	background: #000;
+	width: 100vw;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.footer-bottom p{
+	font-size: 14px;
+	word-spacing: 2px;
+	text-transform: capitalize;
+}
+
+.footer-bottom span{
+	text-transform: uppercase;
+	opacity: .4;
+	font-weight: 200;
+}
